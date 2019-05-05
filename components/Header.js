@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'; // next exports Link as it's own package
 import styled from 'styled-components';
 import Router from 'next/router';
 import NProgress from 'nprogress';

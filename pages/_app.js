@@ -1,8 +1,10 @@
-import App, { Container } from 'next/app';
+import App, { Container } from 'next/app'; // import the App and Container component from next.js
 import Page from '../components/Page';
 import { ApolloProvider } from 'react-apollo';
 import withData from '../lib/withData';
+import next = require('next');
 
+// Extending App provides MyApp with next.js functionality
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
@@ -20,6 +22,7 @@ class MyApp extends App {
       <Container>
         <ApolloProvider client={apollo}>
           <Page>
+            {/* Component will be whichever page is visited eg. Sell.js */}
             <Component {...pageProps} />
           </Page>
         </ApolloProvider>
@@ -29,4 +32,3 @@ class MyApp extends App {
 }
 
 export default withData(MyApp);
-3
