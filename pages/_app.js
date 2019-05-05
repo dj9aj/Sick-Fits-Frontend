@@ -2,7 +2,7 @@ import App, { Container } from 'next/app'; // import the App and Container compo
 import Page from '../components/Page';
 import { ApolloProvider } from 'react-apollo';
 import withData from '../lib/withData';
-import next = require('next');
+const next = require('next');
 
 // Extending App provides MyApp with next.js functionality
 class MyApp extends App {

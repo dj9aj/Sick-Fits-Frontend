@@ -13,11 +13,13 @@ const theme = {
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
 };
 
+// This is the main styling for the Page component
 const StyledPage = styled.div`
   background: white;
   color: ${props => props.theme.black};
 `;
 
+// Inner contains all the content on the page
 const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
@@ -54,6 +56,7 @@ injectGlobal`
 class Page extends Component {
   render() {
     return (
+      // ThemeProvider allows you to specify themes at the top level component, and any child can access those values.
       <ThemeProvider theme={theme}>
         <StyledPage>
           <Meta />

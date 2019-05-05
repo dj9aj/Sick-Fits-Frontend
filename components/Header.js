@@ -4,17 +4,23 @@ import Router from 'next/router';
 import NProgress from 'nprogress';
 import Nav from './Nav';
 
+// -------------------------------------
+// Listen for events on router
+// -------------------------------------
+
+// Fires when a route starts to change
 Router.onRouteChangeStart = () => {
   NProgress.start();
 };
-
+// Fires when a route has changed completely
 Router.onRouteChangeComplete = () => {
   NProgress.done();
 };
-
+// Fires when there's an error changing routes
 Router.onRouteChangeError = () => {
   NProgress.done();
 };
+
 
 const Logo = styled.h1`
   font-size: 4rem;
