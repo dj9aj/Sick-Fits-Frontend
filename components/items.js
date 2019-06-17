@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+// Allow us to query data directly into component
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import styled from 'styled-components';
 import Item from './Item';
 
 const ALL_ITEMS_QUERY = gql`
+  # Best practice to name queries the same as the container variable 
   query ALL_ITEMS_QUERY {
     items {
       id
@@ -34,6 +36,7 @@ class Items extends Component {
     return (
       <Center>
         <Query query={ALL_ITEMS_QUERY}>
+          {/* The child of a query component must be a function */}
           {({ data, error, loading }) => {
             if (loading) return <p>Loading...</p>;
             if (error) return <p>Error: {error.message}</p>;
