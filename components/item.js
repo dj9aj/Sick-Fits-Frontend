@@ -19,6 +19,7 @@ export default class Item extends Component {
 
         <Title>
           <Link
+            // Pass object to href to be able to pass query params.
             href={{
               pathname: '/item',
               query: { id: item.id },
