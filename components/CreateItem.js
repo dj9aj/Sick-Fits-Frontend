@@ -68,7 +68,7 @@ class CreateItem extends Component {
               e.preventDefault();
               // call the mutation
               const res = await createItem();
-              // change them to the single item page
+              // route them to the single item page
               console.log(res);
               Router.push({
                 pathname: '/item',
@@ -77,7 +77,9 @@ class CreateItem extends Component {
             }}
           >
             <Error error={error} />
+            {/* aria-busy is for accessibility */}
             <fieldset disabled={loading} aria-busy={loading}>
+              {/* htmlFor helps screenreaders detect content */}
               <label htmlFor="file">
                 Image
                 <input
