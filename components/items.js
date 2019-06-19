@@ -40,7 +40,7 @@ class Items extends Component {
         <Pagination page={this.props.page} />
         <Query
           query={ALL_ITEMS_QUERY}
-          {/* The child of a query component must be a function */}
+          // The child of a query component must be a function
           // fetchPolicy="network-only"
           variables={{
             skip: this.props.page * perPage - perPage,
