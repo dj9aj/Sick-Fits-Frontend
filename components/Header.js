@@ -1,26 +1,21 @@
-import Link from 'next/link'; // next exports Link as it's own package
+import Link from 'next/link';
 import styled from 'styled-components';
-import Router from 'next/router';
 import NProgress from 'nprogress';
+import Router from 'next/router';
 import Nav from './Nav';
+import Cart from './Cart';
+import Search from './Search';
 
-// -------------------------------------
-// Listen for events on router
-// -------------------------------------
-
-// Fires when a route starts to change
 Router.onRouteChangeStart = () => {
   NProgress.start();
 };
-// Fires when a route has changed completely
 Router.onRouteChangeComplete = () => {
   NProgress.done();
 };
-// Fires when there's an error changing routes
+
 Router.onRouteChangeError = () => {
   NProgress.done();
 };
-
 
 const Logo = styled.h1`
   font-size: 4rem;
@@ -71,9 +66,9 @@ const Header = () => (
       <Nav />
     </div>
     <div className="sub-bar">
-      <p>Search</p>
+      <Search />
     </div>
-    <div>Cart</div>
+    <Cart />
   </StyledHeader>
 );
 

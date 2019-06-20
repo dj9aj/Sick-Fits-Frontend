@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// Allow us to query data directly into component
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import styled from 'styled-components';
@@ -8,7 +7,6 @@ import Pagination from './Pagination';
 import { perPage } from '../config';
 
 const ALL_ITEMS_QUERY = gql`
-  # Best practice to name queries the same as the container variable 
   query ALL_ITEMS_QUERY($skip: Int = 0, $first: Int = ${perPage}) {
     items(first: $first, skip: $skip, orderBy: createdAt_DESC) {
       id
@@ -40,7 +38,6 @@ class Items extends Component {
         <Pagination page={this.props.page} />
         <Query
           query={ALL_ITEMS_QUERY}
-          // The child of a query component must be a function
           // fetchPolicy="network-only"
           variables={{
             skip: this.props.page * perPage - perPage,

@@ -3,7 +3,6 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import Error from './ErrorMessage';
 import styled from 'styled-components';
-// This allows us to manipulate the head tag from the html header
 import Head from 'next/head';
 
 const SingleItemStyles = styled.div`
@@ -66,5 +65,6 @@ class SingleItem extends Component {
     );
   }
 }
- 
+
 export default SingleItem;
+export { SINGLE_ITEM_QUERY };

@@ -9,18 +9,31 @@ const CURRENT_USER_QUERY = gql`
       email
       name
       permissions
+      orders {
+        id
+      }
+      cart {
+        id
+        quantity
+        item {
+          id
+          price
+          image
+          title
+          description
+        }
+      }
     }
   }
 `;
 
-// This is a render prop component
 const User = props => (
   <Query {...props} query={CURRENT_USER_QUERY}>
     {payload => props.children(payload)}
   </Query>
 );
 
-User.PropTypes = {
+User.propTypes = {
   children: PropTypes.func.isRequired,
 };
 
