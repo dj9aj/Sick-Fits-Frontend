@@ -13,7 +13,6 @@ const CURRENT_USER_QUERY = gql`
   }
 `;
 
-
 // This is a render prop component
 const User = props => (
   <Query {...props} query={CURRENT_USER_QUERY}>
