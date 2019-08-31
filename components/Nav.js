@@ -10,7 +10,7 @@ const Nav = () => (
   <User>
     {/* The data returned is a result of the CURRENT_USER_QUERY */}
     {({ data: { me } }) => (
-      <NavStyles>
+      <NavStyles data-test="nav">
         {/* Rather than attach a href to the anchor tag, wrap the anchor tag in a Link tag. This will bind the link to HTML5 push state. */}
         <Link href="/items">
           <a>Shop</a>
@@ -30,9 +30,9 @@ const Nav = () => (
             <Mutation mutation={TOGGLE_CART_MUTATION}>
               {(toggleCart) => (
                 <button onClick={toggleCart}>
-                My Cart
-                <CartCount count={me.cart.reduce((tally, cartItem) => tally + cartItem.quantity, 0)}></CartCount>
-              </button>
+                  My Cart
+                  <CartCount count={me.cart.reduce((tally, cartItem) => tally + cartItem.quantity, 0)}></CartCount>
+                </button>
               )}
             </Mutation>
           </>
@@ -49,3 +49,4 @@ const Nav = () => (
 );
 
 export default Nav;
+
