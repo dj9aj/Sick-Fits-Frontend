@@ -844,30 +844,17 @@ var Nav = function Nav() {
         lineNumber: 22
       },
       __self: this
-    }, "Orders")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: "/me",
+    }, "Orders")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Signout__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 24
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    }, "Account")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Signout__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Mutation"], {
       mutation: _Cart__WEBPACK_IMPORTED_MODULE_3__["TOGGLE_CART_MUTATION"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 25
       },
       __self: this
     }, function (toggleCart) {
@@ -875,7 +862,7 @@ var Nav = function Nav() {
         onClick: toggleCart,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 27
         },
         __self: this
       }, "My Cart", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CartCount__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -884,7 +871,7 @@ var Nav = function Nav() {
         }, 0),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 29
         },
         __self: this
       }));
@@ -892,13 +879,13 @@ var Nav = function Nav() {
       href: "/signup",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 36
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 37
       },
       __self: this
     }, "Sign In")));
@@ -1704,7 +1691,7 @@ function (_React$Component) {
             name: "Sick Fits",
             description: "Order of ".concat(totalItems(me.cart), " items!"),
             image: me.cart.length && me.cart[0].item && me.cart[0].item.image,
-            stripeKey: "pk_test_Vtknn6vSdcZWSG2JWvEiWSqC",
+            stripeKey: "pk_test_Mi3rzPSN305BpbE59r9Gup2x00gfGrHDxg",
             currency: "USD",
             email: me.email,
             token: function token(res) {
