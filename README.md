@@ -8,14 +8,25 @@ GraphQL -
 
 GraphQL has been a buzz lately and I was keen to give it a try. It's essentially an alternative to the way in which REST APIs work. In contrast to hitting an API endpoint, where you just accept the data that's returned to you, GraphQL allows you to write queries on the client side and it gives you the freedom to specify the exact data in the shape that you want returned from the server. It is not a framework, and probably better described as a specification that can be implemented by many different programming languages. For example, if you're working JavaScript, there will be a library to interface with GraphQL.
 
-It requires buy-in from both the client and server side. The client will talk to the GraphQL server by specifically asking for the data required. What I really like is that I don't need to make multiple requests to fetch the data that I want eg. api/blog/posts, api/blog/users. I just hit one endpoint, and get back exactly the data that I request. If the data is relational, queries can be nested. For example, you can query a list of posts, the authors of each post, and then also profile information about each user, and all the specific data will be returned from that one query.
+It requires buy-in from both the client and server side. The client will talk to the GraphQL server by specifically asking for the data required. What I really like is that I don't need to make multiple requests to fetch the data that I want eg. api/blog/posts, api/blog/users etc. I just hit one endpoint, and get back exactly the data that I request. If the data is relational, queries can be nested. For example, you can query a list of posts, the authors of each post, and then also profile information about each user, and all the specific data will be returned from that one query.
 
-Apollo Client - There is an array of different JavaScript GraphQL clients to work with, however Apollo does a great job of managing data in React, and reduces the need for Redux, which in turn cuts out a tonne of boilerplate code. Apollo can fetch the GraphQL queries, and perform mutations. It can also cache GraphQL data, and manages error handling and loading states automatically.
-GraphQL Queries - 
+Apollo Client - 
 
-React - 
+There is an array of different JavaScript GraphQL clients to work with, however Apollo does a great job of managing data in React, and reduces the need for Redux, which in turn cuts out a tonne of boilerplate code. Apollo can fetch the GraphQL queries, and perform mutations. It can also cache GraphQL data, and manages error handling and loading states automatically. React-Apollo is used as an adaptor for the Apollo Client, which is the view layer.
 
-This project uses Next.js, which covers server side rendering.
+Next.js - 
+
+This project uses Next.js, which covers server side rendering and all of the routing and tooling, such as Webpack configuration. Because of SSR, the server will render the first run of the application, and the client with pickup from there and check if any updates are needed. As each React component has it's own styling, it brings the CSS when it's ready to be mounted. With SSR, everything needs to be fetched and ready before the data is sent to the browser, therefore it needs the CSS at the point of the initial render. Next.js solves this with Document component, which is only rendered on the server side. It's used to change the initial server side rendered markup. It will fetch the CSS before its rendered in the browser.
+
+Styled Components - 
+
+
+
+
+Jest and Enzyme is used for testing the application.
+
+
+
 
 The query is an object, where you only provide it the properties that you want. The data returned includes the object but also with the values to the properties as well.
 I've deployed the React app via Heroku - https://sickfits-jack-react-prod.herokuapp.com
