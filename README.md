@@ -28,7 +28,7 @@ This project uses Next.js, which covers server side rendering and all of the rou
 
 ### Prisma
 
-Prisma is a library that sits on top of a database, and provides a full featured GraphQL API, which can perform CRUD operations, relationships, data updating, querying etc. When creating data relationships and mutating or querying from GraphQl, its Prisma that actualy does all of the work under the hood. Just to be clear, GraphQL is a specification for how your data should look. It does not actually query or mutate data itself. When you build and modify your data model, you deploy your updated version to the prisma server, and then Prisma will return the GraphQL schema. We will never actually write any Postgres or MySql queries, we’ll always be interfacing with the graphQL queries that Prisma surfaces for us.
+Prisma is a library that sits on top of a database, and provides a full featured GraphQL API, which can perform CRUD operations, relationships, data updating, querying etc. When creating data relationships and mutating or querying from GraphQL, it's Prisma that actualy does all of the work under the hood. Just to be clear, GraphQL is a specification for how your data should look. It does not actually query or mutate data itself. When you build and modify your data model, you deploy your updated version to the prisma server, and then Prisma will return the GraphQL schema. During the project I don't actually write any Postgres or MySql queries, I always interface with the GraphQL queries that Prisma surfaces for me.
 
 ### Yoga
 
